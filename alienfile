@@ -3,7 +3,7 @@ use alienfile;
 plugin PkgConfig => 'opencv';
 
 share {
-  start_url 'https://opencv.org/releases/';
+  start_url 'https://github.com/opencv/opencv/releases';
   plugin Download => (
     filter  => qr/^[0-9\.]+\.zip$/,
     version => qr/([0-9\.]+)/,
