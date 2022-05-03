@@ -1,0 +1,22 @@
+use alienfile;
+
+plugin PkgConfig => 'opencv';
+
+share {
+  start_url 'https://opencv.org/releases/';
+  plugin Download => (
+    filter  => qr/^[0-9\.]+\.zip$/,
+    version => qr/([0-9\.]+)/,
+  );
+  plugin Extract => 'zip';
+  plugin 'Build::CMake';
+  build [
+    ['%{cmake}',
+      @{ meta->prop->{plugin_build_cmake}->{args} },
+      qw(-S), '%{.install.extract}',
+      qw(-B build),
+    ],
+    [ '%{make}', qw( -C build ) ],
+    [ '%{make}', qw( -C build ), 'install' ],
+  ];
+}
