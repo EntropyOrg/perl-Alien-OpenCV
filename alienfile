@@ -1,6 +1,6 @@
 use alienfile;
 
-plugin PkgConfig => 'opencv';
+plugin PkgConfig => 'opencv4';
 
 share {
   start_url 'https://github.com/opencv/opencv/releases';
