@@ -5,7 +5,7 @@ plugin PkgConfig => 'opencv4';
 share {
   start_url 'https://github.com/opencv/opencv/releases';
   plugin Download => (
-    filter  => qr/^[0-9\.]+\.zip$/,
+    filter  => qr/^4\.[0-9\.]+\.zip$/,
     version => qr/([0-9\.]+)/,
   );
   plugin Extract => 'zip';
