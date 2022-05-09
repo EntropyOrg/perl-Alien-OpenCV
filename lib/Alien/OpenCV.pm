@@ -9,7 +9,7 @@ use 5.008004;
 
 =head1 NAME
 
-Alien::OpenCV - Find or build OpenCV
+Alien::OpenCV - Find or build OpenCV computer vision library
 
 =head1 SYNOPSIS
 
@@ -82,6 +82,10 @@ for the use of other modules.
 =head1 SEE ALSO
 
 =over 4
+
+=item L<OpenCV|https://opencv.org/>
+
+The OpenCV home page.
 
 =item L<Alien>
 
