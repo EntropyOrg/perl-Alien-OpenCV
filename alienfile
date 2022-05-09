@@ -13,6 +13,9 @@ share {
   build [
     ['%{cmake}',
       @{ meta->prop->{plugin_build_cmake}->{args} },
+      qw(
+        -DBUILD_TESTS=OFF
+      ),
       qw(-S), '%{.install.extract}',
       qw(-B build),
     ],
