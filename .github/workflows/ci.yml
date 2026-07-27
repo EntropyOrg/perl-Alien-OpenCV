@@ -9,7 +9,7 @@ on:
 env:
   PKG_NAME: OpenCV
   PKG_UBUNTU: libopencv-dev
-  PKG_HOMEBREW: opencv
+  PKG_HOMEBREW: opencv@4
   PKG_MSYS2_MINGW64: mingw-w64-x86_64-opencv
   PKG_MSYS2_MINGW64_DEPS: >-
     base-devel
