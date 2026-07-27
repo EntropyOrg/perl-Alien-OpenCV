@@ -23,12 +23,15 @@ share {
     }
   );
   plugin 'Build::CMake';
+
+  my @cmake_opencv_opts = qw(
+    -DBUILD_TESTS=OFF
+    -DOPENCV_GENERATE_PKGCONFIG=ON
+  );
   build [
     ['%{cmake}',
       @{ meta->prop->{plugin_build_cmake}->{args} },
-      qw(
-        -DBUILD_TESTS=OFF
-      ),
+      @cmake_opencv_opts,
       # macOS currently has problems during build with zlib
       ( $^O eq 'darwin' ?  qw(-DBUILD_ZLIB=OFF) : () ),
       qw(-S), '%{.install.extract}',
