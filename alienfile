@@ -27,6 +27,12 @@ share {
   my @cmake_opencv_opts = qw(
     -DBUILD_TESTS=OFF
     -DOPENCV_GENERATE_PKGCONFIG=ON
+
+    -DBUILD_opencv_java=OFF
+    -DBUILD_opencv_js=OFF
+    -DBUILD_opencv_python2=OFF
+    -DBUILD_opencv_python3=OFF
+    -DBUILD_opencv_python=OFF
   );
   build [
     ['%{cmake}',
