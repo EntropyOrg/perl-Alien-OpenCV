@@ -18,6 +18,7 @@ env:
     mingw-w64-x86_64-perl
     mingw-w64-x86_64-curl
     mingw-w64-x86_64-cmake
+    mingw-w64-x86_64-openssl
 
 jobs:
   dist:
