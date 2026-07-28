@@ -3,10 +3,6 @@ use alienfile;
 plugin PkgConfig => 'opencv4';
 
 share {
-  meta->before_hook( build => sub {
-          die "Share install not yet supported on MSWin32" if $^O eq 'MSWin32';
-  });
-
   plugin 'Download::GitHub' => (
     github_user => 'opencv',
     github_repo => 'opencv',
