@@ -112,6 +112,11 @@ jobs:
         shell: msys2 {0}
         run: |
           pacman -S --needed --noconfirm ${{ env.PKG_MSYS2_MINGW64 }}
+      - name: Set up all type build environment variables (MSYS2/MinGW)
+        if: runner.os == 'Windows' && matrix.dist == 'msys2'
+        shell: msys2 {0}
+        run: |
+          echo 'ALIEN_BUILD_PKG_CONFIG=PkgConfig::CommandLine' >> $GITHUB_ENV
       - name: Set up share build environment variables (MSYS2/MinGW)
         if: runner.os == 'Windows' && matrix.dist == 'msys2' && matrix.alien-install-type == 'share'
         shell: msys2 {0}
