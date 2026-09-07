@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.003     2026-09-07 16:22:09-04:00 America/New_York
   - Improve support for `pkg-config` on MSWin32 so that the 'share' install
     correctly gathers the build flags.
     See <https://github.com/EntropyOrg/perl-Alien-OpenCV/pull/8>,
